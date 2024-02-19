@@ -4,14 +4,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyDelivery.Models
 {
-    [Table("Order")]
+    
     public class Order
     {
-        public int Id { get; set; }
+        public int Id { get; }
         [Column("Status")]
         public string? Status { get; set; }
        [Required] [ForeignKey("Customer")]
-        public int CustumerId {  get; set; }
+        public int CustumerId {  get;  }
         [Required]
         public DateTime OrderDate { get; set; }
     }

@@ -1,10 +1,13 @@
-﻿namespace MyDelivery.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MyDelivery.Models
 {
     public class Delivery
     {
-        public int Id { get; set; }
+       
+        public int Id { get;}
         public DateTime DeliveryDate { get; set; }
-        public Order Order { get; set; }
+        public ICollection<Order>? Orders { get; set; }
         public string? Status { get; set; }
     }
 }

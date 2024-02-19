@@ -2,6 +2,6 @@
 {
     public class Cart
     {
-        public int Id { get; set; }
+        public int Id { get; }
     }
 }

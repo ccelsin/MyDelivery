@@ -17,5 +17,11 @@ namespace MyDelivery.Data
         public DbSet<MyDelivery.Models.Order> Order { get; set; } = default!;
 
         public DbSet<MyDelivery.Models.Customer>? Customer { get; set; }
+
+        public DbSet<MyDelivery.Models.Delivery>? Delivery { get; set; }
+
+        public DbSet<MyDelivery.Models.Item>? Item { get; set; }
+
+        public DbSet<MyDelivery.Models.Cart>? Cart { get; set; }
     }
 }
