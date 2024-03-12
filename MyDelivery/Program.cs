@@ -27,4 +27,13 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+using (var serviceScope = app.Services.GetService<IServiceScopeFactory>().CreateScope())
+{
+
+    var context = serviceScope.ServiceProvider.GetRequiredService<MyDeliveryContext>();
+    context.Database.EnsureDeleted();
+    context.Database.EnsureCreated();
+}
+
+
+    app.Run();

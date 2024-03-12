@@ -7,7 +7,7 @@ namespace MyDelivery.Models
     
     public class Order
     {
-        public int Id { get; }
+        public int Id { get; set; }
         [Column("Status")]
         public string? Status { get; set; }
        [Required] [ForeignKey("Customer")]
